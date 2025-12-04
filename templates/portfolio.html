@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Tattoo Portfolio | Lund Tattoo Artist | {{ site_name }}{% endblock %}
+{% block meta_description %}View the tattoo portfolio of emmasdotter.tattoo - minimalist and fine-line tattoo designs in Lund, Sweden.{% endblock %}
+{% block og_title %}Tattoo Portfolio | {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="gallery-container">
+    <header class="page-header">
+        <h1>Portfolio</h1>
+    </header>
+
+    {% if images %}
+    <div class="gallery-grid">
+        {% for image in images %}
+        <div class="gallery-item" data-src="{{ url_for('static', filename='portfolio/' + image.filename) }}" data-title="{{ image.title }}">
+            <img src="{{ url_for('static', filename='portfolio/' + image.filename) }}"
+                 alt="{{ image.title }}"
+                 loading="lazy">
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="gallery-empty">
+        <p>Portfolio coming soon.</p>
+        <p>Check back later to see my latest work.</p>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img class="lightbox-image" src="" alt="">
+        <p class="lightbox-title"></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+{% endblock %}

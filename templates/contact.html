@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Book a Tattoo in Lund | {{ site_name }}{% endblock %}
+{% block meta_description %}Contact emmasdotter.tattoo to book your tattoo appointment in Lund, Sweden. Located at Honey Bunny Tattoo.{% endblock %}
+{% block og_title %}Contact | {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <h1>Get in Touch</h1>
+
+    <ul class="contact-info">
+        {% if contact_instagram %}
+        <li>
+            <span class="contact-label">Instagram</span>
+            <a href="https://instagram.com/{{ contact_instagram }}" target="_blank" rel="noopener noreferrer">
+                @{{ contact_instagram }}
+            </a>
+        </li>
+        {% endif %}
+
+        {% if contact_location %}
+        <li>
+            <span class="contact-label">Location</span>
+            {% if contact_location_url %}
+            <a href="{{ contact_location_url }}" target="_blank" rel="noopener noreferrer">{{ contact_location }}</a>
+            {% else %}
+            <span>{{ contact_location }}</span>
+            {% endif %}
+        </li>
+        {% endif %}
+
+        {% if contact_hours %}
+        <li>
+            <span class="contact-label">Hours</span>
+            <span>{{ contact_hours }}</span>
+        </li>
+        {% endif %}
+    </ul>
+
+    <!-- TODO: Add contact form with backend processing -->
+    <!--
+    <form class="contact-form" action="/contact" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Send Message</button>
+    </form>
+    -->
+</div>
+{% endblock %}

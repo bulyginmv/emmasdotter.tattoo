@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Tattoo Artist in Lund, Sweden | {{ site_name }}{% endblock %}
+{% block meta_description %}Professional tattoo artist in Lund, Sweden. Specializing in minimalist and fine-line tattoos at Honey Bunny Tattoo. Book your custom tattoo today.{% endblock %}
+{% block og_title %}{{ site_name }} - Tattoo Artist in Lund, Sweden{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <img src="{{ url_for('static', filename='images/' + hero_image) }}"
+         alt="Minimalist tattoo artwork by emmasdotter - Tattoo artist in Lund, Sweden"
+         class="hero-image">
+</section>
+
+<section class="intro-section">
+    <h1>Tattoo Artist in Lund, Sweden</h1>
+    <p class="intro-text">{{ artist_intro | safe }}</p>
+    <a href="https://instagram.com/{{ contact_instagram }}" target="_blank" rel="noopener noreferrer" class="cta-button">Book an Appointment</a>
+</section>
+{% endblock %}

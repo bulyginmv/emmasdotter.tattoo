@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}About | Tattoo Artist in Lund, Sweden | {{ site_name }}{% endblock %}
+{% block meta_description %}Learn about emmasdotter.tattoo - a professional tattoo artist based in Lund, Sweden, specializing in minimalist and fine-line tattoos.{% endblock %}
+{% block og_title %}About | {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="about-portrait">
+        <img src="{{ url_for('static', filename='images/' + artist_portrait) }}"
+             alt="Portrait of {{ artist_name }}">
+    </div>
+
+    <div class="about-bio">
+        <h1>{{ artist_name }}</h1>
+        {{ artist_bio | safe }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Wanna Do Tattoo Designs | Lund Tattoo Artist | {{ site_name }}{% endblock %}
+{% block meta_description %}Tattoo designs available for booking in Lund, Sweden. Browse flash designs and ready-to-tattoo artwork by emmasdotter.tattoo.{% endblock %}
+{% block og_title %}Wanna Do Designs | {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="gallery-container">
+    <header class="page-header">
+        <h1>Wanna Do</h1>
+        <p class="page-subtitle">Designs I'm excited to bring to life. Interested in any of these? Let's make it happen!</p>
+    </header>
+
+    {% if images %}
+    <div class="gallery-grid">
+        {% for image in images %}
+        <div class="gallery-item wannado-item" data-src="{{ url_for('static', filename='wannado/' + image.filename) }}" data-title="{{ image.title }}">
+            <img src="{{ url_for('static', filename='wannado/' + image.filename) }}"
+                 alt="{{ image.title }}"
+                 loading="lazy">
+            <a href="https://instagram.com/{{ contact_instagram }}" target="_blank" rel="noopener noreferrer" class="book-button">Book This Design</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="gallery-empty">
+        <p>New designs coming soon.</p>
+        <p>Check back later to see what I'm excited to create next.</p>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img class="lightbox-image" src="" alt="">
+        <p class="lightbox-title"></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+{% endblock %}

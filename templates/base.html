@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Professional tattoo artist in Lund, Sweden. Minimalist and fine-line tattoos at Honey Bunny Tattoo. Book your custom tattoo today.{% endblock %}">
+    <meta name="keywords" content="tattoo Lund, tatuering Lund, tattoo artist Lund, tatuerare Lund, fine line tattoo, minimalist tattoo, Honey Bunny Tattoo">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% block og_title %}{{ site_name }} - Tattoo Artist in Lund{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Professional tattoo artist in Lund, Sweden. Minimalist and fine-line tattoos.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:site_name" content="{{ site_name }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="{{ url_for('home') }}" class="site-logo">{{ site_name }}</a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}" class="nav-link {% if current_page == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="nav-link {% if current_page == 'portfolio' %}active{% endif %}">Portfolio</a></li>
+                <li><a href="{{ url_for('wannado') }}" class="nav-link {% if current_page == 'wannado' %}active{% endif %}">Wanna Do</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link {% if current_page == 'about' %}active{% endif %}">About</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link {% if current_page == 'contact' %}active{% endif %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; {{ site_name }} | All rights reserved</p>
+            <!-- TODO: Add social media links -->
+            <!-- TODO: Add footer navigation for future pages (blog, aftercare, etc.) -->
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('nav-open');
+            });
+        }
+    </script>
+    {% block scripts %}{% endblock %}
+
+    <!-- Schema.org Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TattooParlor",
+        "name": "emmasdotter.tattoo",
+        "description": "Professional tattoo artist specializing in minimalist and fine-line tattoos in Lund, Sweden",
+        "url": "https://emmasdotter.tattoo",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Honey Bunny Tattoo",
+            "addressLocality": "Lund",
+            "addressCountry": "SE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "55.7047",
+            "longitude": "13.1910"
+        },
+        "openingHours": "Tu-Sa",
+        "sameAs": [
+            "https://instagram.com/emmasdotter.tattoo"
+        ]
+    }
+    </script>
+</body>
+</html>
