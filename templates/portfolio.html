@@ -13,9 +13,9 @@
     {% if images %}
     <div class="gallery-grid">
         {% for image in images %}
-        <div class="gallery-item" data-src="{{ url_for('static', filename='portfolio/' + image.filename) }}" data-title="{{ image.title }}">
+        <div class="gallery-item" data-src="{{ url_for('static', filename='portfolio/' + image.filename) }}">
             <img src="{{ url_for('static', filename='portfolio/' + image.filename) }}"
-                 alt="{{ image.title }}"
+                 alt="Tattoo artwork"
                  loading="lazy">
         </div>
         {% endfor %}
@@ -33,7 +33,6 @@
     <div class="lightbox-content">
         <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
         <img class="lightbox-image" src="" alt="">
-        <p class="lightbox-title"></p>
     </div>
 </div>
 {% endblock %}

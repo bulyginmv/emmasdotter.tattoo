@@ -14,9 +14,11 @@
     {% if images %}
     <div class="gallery-grid">
         {% for image in images %}
-        <div class="gallery-item wannado-item" data-src="{{ url_for('static', filename='wannado/' + image.filename) }}" data-title="{{ image.title }}">
-            <img src="{{ url_for('static', filename='wannado/' + image.filename) }}"
-                 alt="{{ image.title }}"
+        <div class="gallery-item wannado-item"
+             data-drawing="{{ url_for('static', filename='wannado/' + image.drawing) }}"
+             data-applied='{{ image.applied | tojson }}'>
+            <img src="{{ url_for('static', filename='wannado/' + image.drawing) }}"
+                 alt="Tattoo design"
                  loading="lazy">
             <a href="https://instagram.com/{{ contact_instagram }}" target="_blank" rel="noopener noreferrer" class="book-button">Book This Design</a>
         </div>
@@ -32,14 +34,16 @@
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>
     <div class="lightbox-content">
         <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
         <img class="lightbox-image" src="" alt="">
-        <p class="lightbox-title"></p>
+        <div class="lightbox-indicators"></div>
     </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
 </div>
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+<script src="{{ url_for('static', filename='js/wannado-lightbox.js') }}"></script>
 {% endblock %}

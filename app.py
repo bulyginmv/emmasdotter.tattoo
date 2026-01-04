@@ -30,7 +30,7 @@ ARTIST = {
     "name": "Nicole ✨",
     "bio": """<p>Hi! I’m Nicole, a tattoo artist based in Lund, Sweden.
 <br><br>
-                I’ve loved tattoos since my teens — stick-and-poke tattoos included! 😊 After studying art in school, I decided in 2021 to turn my passion into a career. Dreams do come true: in 2025, I moved to Sweden and joined Honey Bunny Tattoo in Lund as a full-time artist, thanks to my amazing colleague Karin!
+                My love for tattoos started early with teenage stick-and-pokes! Even while I was pursuing my Master’s degree and working as an art teacher, that passion never faded. In 2022, I took the leap to turn my artistic background into a tattooing career. Fast forward to 2025: I moved to Sweden and found my home at Honey Bunny Tattoo in Lund. It’s been an incredible journey, and I’m so grateful to Karin for helping me make this dream a reality.
 <br><br>
 
                 I specialize in fine-line, illustrative tattoos with floral or abstract ornamental designs, but my favorite part is helping clients bring their tattoo ideas to life.

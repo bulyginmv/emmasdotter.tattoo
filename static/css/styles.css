@@ -262,7 +262,7 @@ p {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 9 / 12;
 }
 
 .gallery-item img {
@@ -390,6 +390,74 @@ p {
     opacity: 0.7;
 }
 
+/* Lightbox Navigation Arrows */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 0.75rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev {
+    left: 1rem;
+}
+
+.lightbox-next {
+    right: 1rem;
+}
+
+/* Lightbox Dot Indicators */
+.lightbox-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.lightbox-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lightbox-dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.lightbox-dot.active {
+    background: #fff;
+}
+
+/* Responsive: smaller arrows on mobile */
+@media (max-width: 768px) {
+    .lightbox-nav {
+        font-size: 1.5rem;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .lightbox-prev {
+        left: 0.5rem;
+    }
+
+    .lightbox-next {
+        right: 0.5rem;
+    }
+}
+
 /* --------------------------------------------------------------------------
    Hero Section (Homepage)
    -------------------------------------------------------------------------- */
@@ -509,6 +577,7 @@ p {
 }
 
 .about-bio h1 {
+    margin-top: 0;
     margin-bottom: 1.5rem;
 }
 
@@ -535,6 +604,7 @@ p {
 
     .about-portrait {
         width: 40%;
+        margin-top: 1.5rem;
     }
 
     .about-bio {

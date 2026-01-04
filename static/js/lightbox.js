@@ -5,7 +5,7 @@
  * - Click image to open lightbox
  * - Click outside image or close button to close
  * - Press Escape key to close
- * - Display image title from data-title attribute
+ * - Clean, minimal design without titles
  * - Touch-friendly for mobile devices
  */
 
@@ -15,7 +15,6 @@
     // DOM Elements
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = lightbox.querySelector('.lightbox-image');
-    const lightboxTitle = lightbox.querySelector('.lightbox-title');
     const lightboxClose = lightbox.querySelector('.lightbox-close');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -25,14 +24,12 @@
     /**
      * Open the lightbox with the given image
      * @param {string} src - Image source URL
-     * @param {string} title - Image title
      */
-    function openLightbox(src, title) {
+    function openLightbox(src) {
         previouslyFocused = document.activeElement;
 
         lightboxImage.src = src;
-        lightboxImage.alt = title || 'Portfolio image';
-        lightboxTitle.textContent = title || '';
+        lightboxImage.alt = 'Tattoo artwork';
 
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -50,7 +47,6 @@
 
         // Clear image to prevent flash on next open
         lightboxImage.src = '';
-        lightboxTitle.textContent = '';
 
         // Return focus to previously focused element
         if (previouslyFocused) {
@@ -64,8 +60,7 @@
     galleryItems.forEach(function(item) {
         item.addEventListener('click', function() {
             const src = this.getAttribute('data-src');
-            const title = this.getAttribute('data-title');
-            openLightbox(src, title);
+            openLightbox(src);
         });
 
         // Make gallery items keyboard accessible
@@ -75,8 +70,7 @@
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 const src = this.getAttribute('data-src');
-                const title = this.getAttribute('data-title');
-                openLightbox(src, title);
+                openLightbox(src);
             }
         });
     });
