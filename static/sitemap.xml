@@ -1,20 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://emmasdotter.tattoo/</loc>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/images/hero.jpg</image:loc>
+      <image:title>Tattoo artist emmasdotter in Lund Sweden</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/portfolio</loc>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio1.jpg</image:loc>
+      <image:title>Fine line tattoo by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio2.jpg</image:loc>
+      <image:title>Minimalist tattoo by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio3.jpg</image:loc>
+      <image:title>Tattoo artwork by emmasdotter Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio4.jpg</image:loc>
+      <image:title>Fine line tattoo design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio5.jpg</image:loc>
+      <image:title>Minimalist tattoo Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio6.jpg</image:loc>
+      <image:title>Tattoo by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio7.jpg</image:loc>
+      <image:title>Fine line tattoo artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio8.jpg</image:loc>
+      <image:title>Minimalist tattoo design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio9.jpg</image:loc>
+      <image:title>Tattoo artist Lund portfolio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio10.jpg</image:loc>
+      <image:title>Fine line tattoo by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio11.jpg</image:loc>
+      <image:title>Minimalist tattoo artwork Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio12.jpg</image:loc>
+      <image:title>Tattoo design by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio13.jpg</image:loc>
+      <image:title>Fine line tattoo Lund Sweden</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio14.jpg</image:loc>
+      <image:title>Minimalist tattoo by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio15.jpg</image:loc>
+      <image:title>Tattoo artwork Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio16.jpg</image:loc>
+      <image:title>Fine line tattoo design emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio17.jpg</image:loc>
+      <image:title>Minimalist tattoo artist Lund</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/wannado</loc>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design1.jpg</image:loc>
+      <image:title>Tattoo flash design by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design2.jpg</image:loc>
+      <image:title>Available tattoo design Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design3.jpg</image:loc>
+      <image:title>Flash tattoo design emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design4.jpg</image:loc>
+      <image:title>Tattoo flash art Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design5.jpg</image:loc>
+      <image:title>Available tattoo flash design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design6.jpg</image:loc>
+      <image:title>Tattoo design by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design7.jpg</image:loc>
+      <image:title>Flash tattoo Lund Sweden</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design8.jpg</image:loc>
+      <image:title>Tattoo flash emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design9.jpg</image:loc>
+      <image:title>Available tattoo design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design10.jpg</image:loc>
+      <image:title>Tattoo flash art emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design11.jpg</image:loc>
+      <image:title>Flash tattoo design Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design12.jpg</image:loc>
+      <image:title>Tattoo design available</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/about</loc>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/images/artist-portrait.jpg</image:loc>
+      <image:title>Tattoo artist emmasdotter portrait</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/contact</loc>
