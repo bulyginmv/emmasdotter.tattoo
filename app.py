@@ -116,16 +116,22 @@ def contact():
 # SEO Routes
 # =============================================================================
 
+@app.route('/favicon.ico')
+def favicon():
+    """Serve favicon from root URL to avoid redirects."""
+    return send_from_directory('static', 'favicon.ico', mimetype='image/x-icon')
+
+
 @app.route('/robots.txt')
 def robots():
     """Serve robots.txt for search engines."""
-    return send_from_directory('static', 'robots.txt')
+    return send_from_directory('static', 'robots.txt', mimetype='text/plain')
 
 
 @app.route('/sitemap.xml')
 def sitemap():
     """Serve sitemap.xml for search engines."""
-    return send_from_directory('static', 'sitemap.xml')
+    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
 
 
 # =============================================================================
@@ -190,4 +196,4 @@ def page_not_found(e):
 # =============================================================================
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

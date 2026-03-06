@@ -3,6 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://emmasdotter.tattoo/</loc>
+    <lastmod>2026-03-06</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://emmasdotter.tattoo/static/images/hero.jpg</image:loc>
@@ -11,6 +12,7 @@
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/portfolio</loc>
+    <lastmod>2026-03-06</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://emmasdotter.tattoo/static/portfolio/portfolio1.jpg</image:loc>
@@ -83,6 +85,7 @@
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/wannado</loc>
+    <lastmod>2026-03-06</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://emmasdotter.tattoo/static/wannado/design1.jpg</image:loc>
@@ -132,9 +135,62 @@
       <image:loc>https://emmasdotter.tattoo/static/wannado/design12.jpg</image:loc>
       <image:title>Tattoo design available</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design_13.jpg</image:loc>
+      <image:title>Flash tattoo by emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design14.jpg</image:loc>
+      <image:title>Tattoo flash design Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design15.jpg</image:loc>
+      <image:title>Available tattoo art emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design16.jpg</image:loc>
+      <image:title>Flash tattoo art Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design17.jpg</image:loc>
+      <image:title>Tattoo flash design emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design18.jpg</image:loc>
+      <image:title>Available tattoo design Lund Sweden</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design19.jpg</image:loc>
+      <image:title>Flash tattoo by emmasdotter Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design22.jpg</image:loc>
+      <image:title>Tattoo design available emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design23.jpg</image:loc>
+      <image:title>Flash tattoo art emmasdotter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design24.jpg</image:loc>
+      <image:title>Available tattoo flash Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design25.jpg</image:loc>
+      <image:title>Tattoo flash design available</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design26.jpg</image:loc>
+      <image:title>Flash tattoo emmasdotter Lund</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://emmasdotter.tattoo/static/wannado/design27.jpg</image:loc>
+      <image:title>Available tattoo art Lund Sweden</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/about</loc>
+    <lastmod>2026-03-06</lastmod>
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://emmasdotter.tattoo/static/images/artist-portrait.jpg</image:loc>
@@ -143,6 +199,7 @@
   </url>
   <url>
     <loc>https://emmasdotter.tattoo/contact</loc>
+    <lastmod>2026-03-06</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
