@@ -10,6 +10,11 @@ A Flask-based portfolio site featuring:
 Run with: python app.py
 """
 
+import os
+import threading
+import time
+import urllib.request
+
 from flask import Flask, render_template, send_from_directory
 from gallery_data import PORTFOLIO_IMAGES, WANNADO_IMAGES
 
@@ -112,6 +117,12 @@ def contact():
     )
 
 
+@app.route('/healthz')
+def healthz():
+    """Lightweight endpoint for the self-ping keep-alive thread."""
+    return 'OK', 200
+
+
 # =============================================================================
 # SEO Routes
 # =============================================================================
@@ -189,6 +200,31 @@ def page_not_found(e):
 # def api_images():
 #     """JSON API for images."""
 #     pass
+
+
+# =============================================================================
+# Keep-Alive Self-Ping (Render free tier spins down after 15 min idle)
+# =============================================================================
+
+PING_INTERVAL_SECONDS = 14 * 60
+
+def _self_ping_loop():
+    """Periodically hit our own public URL so Render sees inbound traffic
+    and never spins the free-tier instance down."""
+    target = os.environ.get('RENDER_EXTERNAL_URL')
+    if not target:
+        return
+    url = f"{target.rstrip('/')}/healthz"
+    while True:
+        time.sleep(PING_INTERVAL_SECONDS)
+        try:
+            urllib.request.urlopen(url, timeout=10)
+            app.logger.info(f"Self-ping OK: {url}")
+        except Exception as e:
+            app.logger.warning(f"Self-ping failed: {e}")
+
+if os.environ.get('RENDER') == 'true':
+    threading.Thread(target=_self_ping_loop, daemon=True).start()
 
 
 # =============================================================================
