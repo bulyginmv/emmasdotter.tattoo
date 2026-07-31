@@ -476,6 +476,12 @@ p {
     object-fit: cover;
 }
 
+@media (max-width: 767px) {
+    .hero-image {
+        object-position: 52% center;
+    }
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
