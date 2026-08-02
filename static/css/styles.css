@@ -477,8 +477,15 @@ p {
 }
 
 @media (max-width: 767px) {
+    .hero {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 3200 / 1312;
+        background-color: #dba983;
+    }
+
     .hero-image {
-        object-position: 52% center;
+        object-fit: contain;
     }
 }
 
