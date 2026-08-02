@@ -6,9 +6,12 @@
 
 {% block content %}
 <section class="hero">
-    <img src="{{ url_for('static', filename='images/' + hero_image) }}"
-         alt="Minimalist tattoo artwork by emmasdotter - Tattoo artist in Lund, Sweden"
-         class="hero-image">
+    <picture>
+        <source media="(max-width: 767px)" srcset="{{ url_for('static', filename='images/hero-mobile.jpg') }}">
+        <img src="{{ url_for('static', filename='images/' + hero_image) }}"
+             alt="Minimalist tattoo artwork by emmasdotter - Tattoo artist in Lund, Sweden"
+             class="hero-image">
+    </picture>
 </section>
 
 <section class="intro-section">
